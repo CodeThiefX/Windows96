@@ -3,59 +3,55 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'MS Sans Serif';
-  src: url('https://unpkg.com/98.css@0.1.18/dist/MS%20Sans%20Serif.ttf') format('truetype');
+  font-family: "MS Sans Serif";
+  src: url("https://unpkg.com/98.css@0.1.18/dist/MS%20Sans%20Serif.ttf")
+    format("truetype");
 }
 
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: 'MS Sans Serif', 'Pixelated MS Sans Serif', Arial, sans-serif;
+  font-family: "MS Sans Serif", "Pixelated MS Sans Serif", Arial, sans-serif;
   cursor: default;
   user-select: none;
   background: #008080;
   color: #000;
 }
 
+.background {
+  background-image: url("../public/assets/wallpaper.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .window-border {
-  box-shadow: inset -1px -1px #0a0a0a,
-              inset 1px 1px #dfdfdf,
-              inset -2px -2px grey,
-              inset 2px 2px #fff;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf,
+    inset -2px -2px grey, inset 2px 2px #fff;
 }
 
 .window-border-inset {
-  box-shadow: inset -1px -1px #fff,
-              inset 1px 1px #0a0a0a,
-              inset -2px -2px #dfdfdf,
-              inset 2px 2px #808080;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
 .button-active {
-  box-shadow: inset -1px -1px #fff,
-              inset 1px 1px #0a0a0a,
-              inset -2px -2px #dfdfdf,
-              inset 2px 2px #808080;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
 
 .button-default {
-  box-shadow: inset -1px -1px #0a0a0a,
-              inset 1px 1px #fff,
-              inset -2px -2px #808080,
-              inset 2px 2px #dfdfdf;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
 }
 
 .taskbar-button {
-  box-shadow: inset -1px -1px #0a0a0a,
-              inset 1px 1px #fff,
-              inset -2px -2px #808080,
-              inset 2px 2px #dfdfdf;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
+    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
 }
 
 .taskbar-button-active {
-  box-shadow: inset -1px -1px #fff,
-              inset 1px 1px #0a0a0a,
-              inset -2px -2px #dfdfdf,
-              inset 2px 2px #808080;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
 }
