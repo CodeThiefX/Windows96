@@ -9,7 +9,7 @@ import { SocialLinks } from './components/SocialLinks';
 const desktopIcons = [
   { id: 'computer', icon: Computer, label: 'My Computer' },
   { id: 'documents', icon: Folder, label: 'My Documents' },
-  { id: 'internet', icon: Globe, label: 'Internet' },
+  { id: 'internet', icon: Globe, label: 'Socials' },
   { id: 'inbox', icon: Mail, label: 'Inbox' }
 ];
 
