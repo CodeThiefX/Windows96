@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AlertCircle } from "lucide-react";
 import { DesktopIcon } from "./components/DesktopIcon";
 import { WindowFrame } from "./components/WindowFrame";
 import { Taskbar } from "./components/Taskbar";
 import { Preloader } from "./components/Preloader";
 import { SocialLinks } from "./components/SocialLinks";
+import { Tokenomics } from "./components/Tokenomics";
+import { Whitepaper } from "./components/Whitepaper";
 
 const desktopIcons = [
   { id: "computer", icon: "/assets/computer.png", label: "My Computer" },
-  { id: "bin", icon: "/assets/bin.png", label: "Recycle Bin" },
-  { id: "documents", icon: "/assets/file.png", label: "My Documents" },
+  // { id: "bin", icon: "/assets/bin.png", label: "Recycle Bin" },
+  // { id: "documents", icon: "/assets/file.png", label: "My Documents" },
   { id: "internet", icon: "/assets/explorer.png", label: "Socials" },
-  { id: "inbox", icon: "/assets/mail.png", label: "Inbox" },
+  // { id: "inbox", icon: "/assets/mail.png", label: "Inbox" },
+  { id: "whitepaper", icon: "/assets/whitepaper.png", label: "Whitepaper" },
+  { id: "tokenomics", icon: "/assets/tokenomics.png", label: "Tokenomics" },
 ];
 
 function App() {
@@ -20,11 +24,19 @@ function App() {
   const [selectedIcon, setSelectedIcon] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [showSocialLinks, setShowSocialLinks] = useState(false);
+  const [showWhitepaper, setShowWhitepaper] = useState(false);
+  const [showTokenomics, setShowTokenomics] = useState(false);
 
   const handleIconClick = (iconId: string) => {
     setSelectedIcon(iconId === selectedIcon ? null : iconId);
     if (iconId === "internet") {
       setShowSocialLinks(true);
+    }
+    if (iconId === "whitepaper") {
+      setShowWhitepaper(true);
+    }
+    if (iconId === "tokenomics") {
+      setShowTokenomics(true);
     }
   };
 
@@ -86,6 +98,18 @@ function App() {
       {showSocialLinks && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
           <SocialLinks onClose={() => setShowSocialLinks(false)} />
+        </div>
+      )}
+
+      {showWhitepaper && (
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
+          <Whitepaper onClose={() => setShowWhitepaper(false)} />
+        </div>
+      )}
+
+      {showTokenomics && (
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
+          <Tokenomics onClose={() => setShowTokenomics(false)} />
         </div>
       )}
 
