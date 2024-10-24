@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 interface TaskbarProps {
   onStartClick: () => void;
@@ -34,7 +34,7 @@ export function Taskbar({ onStartClick, showStartMenu }: TaskbarProps) {
           } bg-[#c0c0c0]`}
         >
           <img src="/assets/logo.webp" alt="Windows 96" className="w-6 h-6" />
-          <span className="text-sm font-bold">Start</span>
+          <span className="text-sm font-bold">$Start</span>
         </button>
 
         <div className="border-l-2 border-[#808080] border-r-2 border-r-white h-8 mx-1" />

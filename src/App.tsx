@@ -124,7 +124,7 @@ function App() {
                 height={24}
                 alt="Windows 96 Logo"
               />
-              <span className="text-sm font-bold">Windows 96</span>
+              <span className="text-sm font-bold">$START</span>
             </div>
           </div>
           <div className="p-1">

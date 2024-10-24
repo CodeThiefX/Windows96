@@ -14,9 +14,21 @@ const socialLinks = [
   },
   {
     id: "twitter",
-    icon: "/assets/twitter.png",
-    label: "Twitter",
+    icon: "/assets/x.png",
+    label: "X",
     url: "https://twitter.com",
+  },
+  {
+    id: "dex-screener",
+    icon: "/assets/dex-screener.png",
+    label: "Dexscreener",
+    url: "https://dexscreener.com",
+  },
+  {
+    id: "dextools",
+    icon: "/assets/dextools.svg",
+    label: "Dextools",
+    url: "https://dextools.io/app",
   },
 ];
 
