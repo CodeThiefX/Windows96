@@ -41,6 +41,7 @@ export function Taskbar({ onStartClick, showStartMenu }: TaskbarProps) {
 
         {/* System Tray */}
         <div className="ml-auto flex items-center gap-2 px-2 h-8 taskbar-button bg-[#c0c0c0]">
+          <img src="/assets/clock.png" alt="Volume" className="w-4 h-4" />
           <span className="text-sm">{currentTime}</span>
         </div>
       </div>

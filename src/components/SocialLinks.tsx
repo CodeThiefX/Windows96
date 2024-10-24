@@ -1,6 +1,5 @@
-import React from 'react';
-import { MessageCircle, Github, Linkedin, Mail, Globe } from 'lucide-react';
-import { WindowFrame } from './WindowFrame';
+import { Globe } from "lucide-react";
+import { WindowFrame } from "./WindowFrame";
 
 interface SocialLinksProps {
   onClose: () => void;
@@ -8,35 +7,23 @@ interface SocialLinksProps {
 
 const socialLinks = [
   {
-    id: 'telegram',
-    icon: MessageCircle,
-    label: 'Telegram',
-    url: 'https://t.me/yourusername'
+    id: "telegram",
+    icon: "/assets/telegram.png",
+    label: "Telegram",
+    url: "https://t.me",
   },
   {
-    id: 'github',
-    icon: Github,
-    label: 'GitHub',
-    url: 'https://github.com/yourusername'
+    id: "twitter",
+    icon: "/assets/twitter.png",
+    label: "Twitter",
+    url: "https://twitter.com",
   },
-  {
-    id: 'linkedin',
-    icon: Linkedin,
-    label: 'LinkedIn',
-    url: 'https://linkedin.com/in/yourusername'
-  },
-  {
-    id: 'email',
-    icon: Mail,
-    label: 'Email',
-    url: 'mailto:your@email.com'
-  }
 ];
 
 export function SocialLinks({ onClose }: SocialLinksProps) {
   return (
-    <WindowFrame 
-      title="My Social Links" 
+    <WindowFrame
+      title="Socials"
       Icon={Globe}
       onClose={onClose}
       className="w-64"
@@ -50,10 +37,12 @@ export function SocialLinks({ onClose }: SocialLinksProps) {
             rel="noopener noreferrer"
             className="flex flex-col items-center group cursor-pointer"
           >
-            <div className="w-12 h-12 flex items-center justify-center 
-                          bg-[#c0c0c0] border-2 border-[#dfdfdf]
-                          group-hover:border-dotted">
-              <link.icon className="w-8 h-8" strokeWidth={1.5} />
+            <div
+              className="w-12 h-12 flex items-center justify-center 
+                          bg-[#c0c0c0] hover:border-2 border-[#dfdfdf]
+                          group-hover:border-dotted"
+            >
+              <img src={link.icon} alt={link.label} width={24} height={24} />
             </div>
             <span className="mt-1 text-xs">{link.label}</span>
           </a>

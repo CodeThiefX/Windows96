@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Computer, Folder, AlertCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 import { DesktopIcon } from "./components/DesktopIcon";
 import { WindowFrame } from "./components/WindowFrame";
 import { Taskbar } from "./components/Taskbar";
@@ -94,26 +94,31 @@ function App() {
         <div className="absolute bottom-10 left-0 w-64 bg-[#c0c0c0] window-border">
           <div className="p-2 border-b border-[#808080]">
             <div className="flex items-center gap-2">
-              <Computer className="w-6 h-6" strokeWidth={1.5} />
+              <img
+                src="/assets/logo.webp"
+                width={24}
+                height={24}
+                alt="Windows 96 Logo"
+              />
               <span className="text-sm font-bold">Windows 96</span>
             </div>
           </div>
           <div className="p-1">
             {[
-              "Programs",
-              "Documents",
-              "Settings",
-              "Find",
-              "Help",
-              "Run...",
+              { label: "Programs", Icon: "/assets/program.png" },
+              { label: "Documents", Icon: "/assets/file.png" },
+              { label: "Settings", Icon: "/assets/settings.png" },
+              { label: "Find", Icon: "/assets/find.png" },
+              { label: "Help", Icon: "/assets/help.png" },
+              { label: "Run...", Icon: "/assets/run.png" },
             ].map((item, index) => (
               <div
                 key={index}
                 className="px-4 py-1 text-sm flex items-center gap-2 
                             hover:bg-[#000080] hover:text-white cursor-pointer"
               >
-                <Folder className="w-4 h-4" strokeWidth={1.5} />
-                <span>{item}</span>
+                <img src={item.Icon} alt={item.label} width={16} height={16} />
+                <span>{item.label}</span>
               </div>
             ))}
             <div className="my-1 border-t border-[#808080] border-b border-b-white" />
@@ -121,7 +126,12 @@ function App() {
               className="px-4 py-1 text-sm flex items-center gap-2 
                           hover:bg-[#000080] hover:text-white cursor-pointer"
             >
-              <Computer className="w-4 h-4" strokeWidth={1.5} />
+              <img
+                src="/assets/power-off.png"
+                alt="Power Off"
+                width={16}
+                height={16}
+              />
               <span>Shut Down...</span>
             </div>
           </div>

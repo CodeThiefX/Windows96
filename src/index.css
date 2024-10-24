@@ -17,6 +17,7 @@ body {
   user-select: none;
   background: #008080;
   color: #000;
+  cursor: url("../public/assets/White\ Cursor\ Arrow.png"), pointer;
 }
 
 .background {
