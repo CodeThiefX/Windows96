@@ -7,9 +7,10 @@ import { Preloader } from "./components/Preloader";
 import { SocialLinks } from "./components/SocialLinks";
 import { Tokenomics } from "./components/Tokenomics";
 import { Whitepaper } from "./components/Whitepaper";
+import { Roadmap } from "./components/Roadmap";
 
 const desktopIcons = [
-  { id: "computer", icon: "/assets/computer.png", label: "My Computer" },
+  { id: "computer", icon: "/assets/computer.png", label: "Roadmap" },
   // { id: "bin", icon: "/assets/bin.png", label: "Recycle Bin" },
   // { id: "documents", icon: "/assets/file.png", label: "My Documents" },
   { id: "internet", icon: "/assets/explorer.png", label: "Socials" },
@@ -26,6 +27,7 @@ function App() {
   const [showSocialLinks, setShowSocialLinks] = useState(false);
   const [showWhitepaper, setShowWhitepaper] = useState(false);
   const [showTokenomics, setShowTokenomics] = useState(false);
+  const [showRoadmap, setShowRoadmap] = useState(false);
 
   const handleIconClick = (iconId: string) => {
     setSelectedIcon(iconId === selectedIcon ? null : iconId);
@@ -37,6 +39,9 @@ function App() {
     }
     if (iconId === "tokenomics") {
       setShowTokenomics(true);
+    }
+    if (iconId === "computer") {
+      setShowRoadmap(true);
     }
   };
 
@@ -110,6 +115,12 @@ function App() {
       {showTokenomics && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
           <Tokenomics onClose={() => setShowTokenomics(false)} />
+        </div>
+      )}
+
+      {showRoadmap && (
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
+          <Roadmap onClose={() => setShowRoadmap(false)} />
         </div>
       )}
 

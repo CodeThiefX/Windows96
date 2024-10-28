@@ -14,7 +14,11 @@ export function Tokenomics({ onClose }: TokenomicsProps) {
       className="w-64"
     >
       <div className="grid grid-cols-2 gap-4 p-4">
-        <p>Tokenomics</p>
+        <h1 className="font-bold col-span-2">Tokenomics</h1>
+        <div className="col-span-1 font-bold">Token name:</div>
+        <div className="col-span-1">$START</div>
+        <div className="col-span-1 font-bold">Total supply:</div>
+        <div className="col-span-1">1 billion</div>
       </div>
     </WindowFrame>
   );
