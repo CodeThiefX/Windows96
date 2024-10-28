@@ -26,6 +26,7 @@ function App() {
   const [showWhitepaper, setShowWhitepaper] = useState(false);
   const [showTokenomics, setShowTokenomics] = useState(false);
   const [showRoadmap, setShowRoadmap] = useState(false);
+  const [showComputer, setShowComputer] = useState(false);
 
   const handleIconClick = (iconId: string) => {
     setSelectedIcon(iconId === selectedIcon ? null : iconId);
@@ -40,6 +41,9 @@ function App() {
     }
     if (iconId === "roadmap") {
       setShowRoadmap(true);
+    }
+    if (iconId === "computer") {
+      setShowComputer(true);
     }
   };
 
@@ -119,6 +123,30 @@ function App() {
       {showRoadmap && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
           <Roadmap onClose={() => setShowRoadmap(false)} />
+        </div>
+      )}
+
+      {showComputer && (
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center">
+          <WindowFrame
+            title="My Computer"
+            Icon={AlertCircle}
+            onClose={() => setShowComputer(false)}
+            className="w-96"
+          >
+            <div className="p-4 bg-[#c0c0c0]">
+              <p className="text-sm mb-4">WE ARE JUST BETTER</p>
+              <div className="flex justify-end gap-2">
+                <button
+                  onClick={() => setShowComputer(false)}
+                  className="px-4 py-1 text-sm button-default bg-[#c0c0c0] 
+                           active:button-active"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </WindowFrame>
         </div>
       )}
 
