@@ -15,11 +15,11 @@ export function Whitepaper({ onClose }: WhitepaperProps) {
     >
       <div className="p-4 max-h-[700px] overflow-scroll">
         <h1 className="font-bold text-lg">Introducing:</h1>
-        <p>$Start - A Tokenized Community.</p>
+        <p>$START - A Tokenized Community.</p>
         <br />
         <h1 className="font-bold text-lg">Abstract:</h1>
         <p>
-          $Start is an innovative tokenized community that seeks to blend the
+          $START is an innovative tokenized community that seeks to blend the
           charm of retro aesthetics with the cutting-edge technology of
           blockchain. This white paper outlines the vision, structure, and
           tokenomics focusing on two key initiatives designed to enhance member
@@ -28,7 +28,7 @@ export function Whitepaper({ onClose }: WhitepaperProps) {
         <br />
         <h1 className="font-bold text-lg">1. Introduction</h1>
         <p>
-          $Start embodies the essence of starting anew with a nostalgic twist,
+          $START embodies the essence of starting anew with a nostalgic twist,
           offering a platform for trading, sharing, and celebrating retro-themed
           digital assets. Utilizing the $START cryptocurrency, aims to forge a
           community where past inspirations fuel future innovations.
@@ -90,18 +90,6 @@ export function Whitepaper({ onClose }: WhitepaperProps) {
           development.
         </p>
         <br />
-        <h1 className="font-bold text-lg">6. Tokenomics</h1>
-        <ul className="list-disc list-inside">
-          <li>Token name: $START</li>
-          <li>Total supply: 1 billion</li>
-        </ul>
-        <br />
-        <h1 className="font-bold text-lg">7. Roadmap</h1>
-        <ul className="list-disc list-inside">
-          <li>Phase 1: $START Token Launch and Platform Beta Release</li>
-          <li>Phase 2: Alpha Testing with Community</li>
-          <li>Phase 3: Full Launch of Insight Rewards System</li>
-        </ul>
       </div>
     </WindowFrame>
   );

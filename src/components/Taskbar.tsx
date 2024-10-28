@@ -34,10 +34,18 @@ export function Taskbar({ onStartClick, showStartMenu }: TaskbarProps) {
           } bg-[#c0c0c0]`}
         >
           <img src="/assets/logo.webp" alt="Windows 96" className="w-6 h-6" />
-          <span className="text-sm font-bold">$Start</span>
+          <span className="text-sm font-bold">$START</span>
         </button>
 
         <div className="border-l-2 border-[#808080] border-r-2 border-r-white h-8 mx-1" />
+
+        <button
+          className={`h-8 px-2 flex items-center gap-2 ${
+            showStartMenu ? "taskbar-button-active" : "taskbar-button"
+          } bg-[#c0c0c0]`}
+        >
+          <span className="text-sm font-bold">WE ARE JUST BETTER</span>
+        </button>
 
         {/* System Tray */}
         <div className="ml-auto flex items-center gap-2 px-2 h-8 taskbar-button bg-[#c0c0c0]">

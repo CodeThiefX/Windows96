@@ -10,13 +10,11 @@ import { Whitepaper } from "./components/Whitepaper";
 import { Roadmap } from "./components/Roadmap";
 
 const desktopIcons = [
-  { id: "computer", icon: "/assets/computer.png", label: "Roadmap" },
-  // { id: "bin", icon: "/assets/bin.png", label: "Recycle Bin" },
-  // { id: "documents", icon: "/assets/file.png", label: "My Documents" },
-  { id: "internet", icon: "/assets/explorer.png", label: "Socials" },
-  // { id: "inbox", icon: "/assets/mail.png", label: "Inbox" },
+  { id: "computer", icon: "/assets/computer.png", label: "My Computer" },
   { id: "whitepaper", icon: "/assets/whitepaper.png", label: "Whitepaper" },
   { id: "tokenomics", icon: "/assets/tokenomics.png", label: "Tokenomics" },
+  { id: "roadmap", icon: "/assets/mail.png", label: "Roadmap" },
+  { id: "socials", icon: "/assets/explorer.png", label: "Socials" },
 ];
 
 function App() {
@@ -31,7 +29,7 @@ function App() {
 
   const handleIconClick = (iconId: string) => {
     setSelectedIcon(iconId === selectedIcon ? null : iconId);
-    if (iconId === "internet") {
+    if (iconId === "socials") {
       setShowSocialLinks(true);
     }
     if (iconId === "whitepaper") {
@@ -40,7 +38,7 @@ function App() {
     if (iconId === "tokenomics") {
       setShowTokenomics(true);
     }
-    if (iconId === "computer") {
+    if (iconId === "roadmap") {
       setShowRoadmap(true);
     }
   };
@@ -140,17 +138,30 @@ function App() {
           </div>
           <div className="p-1">
             {[
-              { label: "Programs", Icon: "/assets/program.png" },
-              { label: "Documents", Icon: "/assets/file.png" },
-              { label: "Settings", Icon: "/assets/settings.png" },
-              { label: "Find", Icon: "/assets/find.png" },
-              { label: "Help", Icon: "/assets/help.png" },
-              { label: "Run...", Icon: "/assets/run.png" },
+              {
+                id: "computer",
+                label: "My Computer",
+                Icon: "/assets/computer.png",
+              },
+              {
+                id: "whitepaper",
+                label: "Whitepaper",
+                Icon: "/assets/whitepaper.png",
+              },
+              {
+                id: "tokenomics",
+                label: "Tokenomics",
+                Icon: "/assets/tokenomics.png",
+              },
+              { id: "roadmap", label: "Roadmap", Icon: "/assets/mail.png" },
+              { id: "socials", label: "Socials", Icon: "/assets/explorer.png" },
             ].map((item, index) => (
               <div
                 key={index}
+                id={item.id}
                 className="px-4 py-1 text-sm flex items-center gap-2 
-                            hover:bg-[#000080] hover:text-white cursor-pointer"
+                    hover:bg-[#000080] hover:text-white cursor-pointer"
+                onClick={() => handleIconClick(item.id)}
               >
                 <img src={item.Icon} alt={item.label} width={16} height={16} />
                 <span>{item.label}</span>
@@ -159,7 +170,8 @@ function App() {
             <div className="my-1 border-t border-[#808080] border-b border-b-white" />
             <div
               className="px-4 py-1 text-sm flex items-center gap-2 
-                          hover:bg-[#000080] hover:text-white cursor-pointer"
+                    hover:bg-[#000080] hover:text-white cursor-pointer"
+              onClick={() => window.close()}
             >
               <img
                 src="/assets/power-off.png"
